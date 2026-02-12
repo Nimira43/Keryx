@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bytesized&display=swap');
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -120,4 +122,8 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.logo-font {
+  font-family: 'Bytesized';
 }
