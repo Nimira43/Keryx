@@ -1,13 +1,10 @@
-'use client'
-
 import { Button } from '@/components/ui/button'
-import Image from 'next/image'
+import ImageTabs from '@/components/ui/image-tabs'
 import Link from 'next/link'
-import { useState } from 'react'
+import { LuFolderTree, LuNotebook } from 'react-icons/lu'
+import { VscGraphLine } from 'react-icons/vsc'
 
-export default function Home() {
-  const [activeTab, setActiveTab] = useState('organise')
-  
+export default function Home() {  
   return (
     <div className='flex min-h-screen flex-col bg-white'>
       <main className='flex-1'>
@@ -27,82 +24,52 @@ export default function Home() {
             </Link>
           </div>
         </section>
-        <section className='border-t bg-white py-16'>
-          <div className='container mx-auto px-4'>
-            <div className='mx-auto max-w-6xl'>
-              <div className='flex gap-2 justify-center mb-8'>
-                <Button 
-                  onClick={
-                    () => setActiveTab('organise')
-                  }
-                  className={`
-                    px-6 py-3 text-sm font-medium cursor-pointer 
-                    ${activeTab === 'organise' 
-                      ? 'bg-primary' 
-                      : 'bg-gray-700'
-                    }
-                  `}
-                >
-                  Organise Applications
-                </Button>
-                <Button 
-                  onClick={
-                    () => setActiveTab('hired')
-                  }
-                  className={`
-                    px-6 py-3 text-sm font-medium cursor-pointer 
-                    ${activeTab === 'hired' 
-                      ? 'bg-primary' 
-                      : 'bg-gray-700'
-                    }
-                  `}
-                >
-                  Get Hired
-                </Button>
-                <Button 
-                  onClick={
-                    () => setActiveTab('boards')
-                  }
-                  className={`
-                    px-6 py-3 text-sm font-medium cursor-pointer 
-                    ${activeTab === 'boards' 
-                      ? 'bg-primary' 
-                      : 'bg-gray-700'
-                    }  
-                  `}
-                >
-                  Manage Boards
-                </Button>
+        <ImageTabs />
+        <section className="border-t bg-white py-24">
+          <div className="container mx-auto px-4">
+            <div className="grid gap-12 md:grid-cols-3">
+
+              <div className="flex flex-col items-center text-center">
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+                  <LuFolderTree className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="mb-3 text-2xl font-semibold text-black">
+                  Structure Your Search
+                </h3>
+                <p className="text-muted-foreground max-w-xs">
+                  Build clear, flexible boards that map your entire job search — from first contact to final decision.
+                </p>
               </div>
-              <div className='relative mx-auto max-w-5xl overflow-hidden rounded-lg border border-gray-200 shadow-xl'>
-                {activeTab === 'hired' && (
-                  <Image
-                    src='/hero-images/hero-1.jpg'
-                    alt='Organise Applications'
-                    width={1200}
-                    height={800}
-                  />
-                )}
-                {activeTab === 'organise' && (
-                  <Image
-                    src='/hero-images/hero-2.jpg'
-                    alt='Get Hired'
-                    width={1200}
-                    height={800}
-                  />
-                )}  
-                {activeTab === 'boards' && (
-                  <Image
-                    src='/hero-images/hero-3.jpg'
-                    alt='Manage Boards'
-                    width={1200}
-                    height={800}
-                  />
-                )}
+
+              <div className="flex flex-col items-center text-center">
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+                  <VscGraphLine className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="mb-3 text-2xl font-semibold text-black">
+                  See Your Momentum
+                </h3>
+                <p className="text-muted-foreground max-w-xs">
+                  Follow every application as it moves through your pipeline with clean, visual progress tracking.
+                </p>
               </div>
+
+              <div className="flex flex-col items-center text-center">
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+                  <LuNotebook className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="mb-3 text-2xl font-semibold text-black">
+                  Keep Everything in One Place
+                </h3>
+                <p className="text-muted-foreground max-w-xs">
+                  Store notes, dates, contacts, and updates together so nothing slips through the cracks.
+                </p>
+              </div>
+
             </div>
           </div>
         </section>
+
+
       </main>
     </div>
   )
