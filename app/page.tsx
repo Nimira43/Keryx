@@ -25,42 +25,42 @@ export default function Home() {
           </div>
         </section>
         <ImageTabs />
-        <section className="border-t bg-white py-24">
-          <div className="container mx-auto px-4">
-            <div className="grid gap-12 md:grid-cols-3">
+        <section className='border-t bg-white py-24'>
+          <div className='container mx-auto px-4'>
+            <div className='grid gap-12 md:grid-cols-3'>
 
-              <div className="flex flex-col items-center text-center">
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                  <LuFolderTree className="h-6 w-6 text-primary" />
+              <div className='flex flex-col items-center text-center'>
+                <div className='mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10'>
+                  <LuFolderTree className='h-6 w-6 text-primary' />
                 </div>
-                <h3 className="mb-3 text-2xl font-semibold text-black">
+                <h3 className='mb-3 text-2xl font-semibold text-black'>
                   Structure Your Search
                 </h3>
-                <p className="text-muted-foreground max-w-xs">
+                <p className='text-muted-foreground max-w-xs'>
                   Build clear, flexible boards that map your entire job search — from first contact to final decision.
                 </p>
               </div>
 
-              <div className="flex flex-col items-center text-center">
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                  <VscGraphLine className="h-6 w-6 text-primary" />
+              <div className='flex flex-col items-center text-center'>
+                <div className='mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10'>
+                  <VscGraphLine className='h-6 w-6 text-primary' />
                 </div>
-                <h3 className="mb-3 text-2xl font-semibold text-black">
+                <h3 className='mb-3 text-2xl font-semibold text-black'>
                   See Your Momentum
                 </h3>
-                <p className="text-muted-foreground max-w-xs">
+                <p className='text-muted-foreground max-w-xs'>
                   Follow every application as it moves through your pipeline with clean, visual progress tracking.
                 </p>
               </div>
 
-              <div className="flex flex-col items-center text-center">
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                  <LuNotebook className="h-6 w-6 text-primary" />
+              <div className='flex flex-col items-center text-center'>
+                <div className='mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10'>
+                  <LuNotebook className='h-6 w-6 text-primary' />
                 </div>
-                <h3 className="mb-3 text-2xl font-semibold text-black">
+                <h3 className='mb-3 text-2xl font-semibold text-black'>
                   Keep Everything in One Place
                 </h3>
-                <p className="text-muted-foreground max-w-xs">
+                <p className='text-muted-foreground max-w-xs'>
                   Store notes, dates, contacts, and updates together so nothing slips through the cracks.
                 </p>
               </div>
